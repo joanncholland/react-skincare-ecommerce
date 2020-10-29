@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export default class Default extends Component {
   render() {
@@ -12,7 +13,9 @@ export default class Default extends Component {
             <h1>Error</h1>
             <h2>Page not found</h2>
             <h3>The requested URL <span className="text-danger">{this.props.location.pathname}</span> was not found</h3>
-            <HomeButton className="btn">Go Home</HomeButton>
+            <Link to="/">
+              <HomeButton className="btn">Go Home</HomeButton>
+            </Link>
           </div>
         </div>
       </div>
